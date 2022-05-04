@@ -1,15 +1,19 @@
 import { FaRegWindowClose } from "react-icons/fa";
 
-const Modal = ({ name, phone, mail, address, company }) => {
+const Modal = ({ contact, onCloseModal }) => {
+  const { name, phone, email, address, company } = contact;
+
   return (
     <div className="modal">
       <header>
         <h1>{name}</h1>
-        <FaRegWindowClose />
+        <button onClick={onCloseModal}>
+          <FaRegWindowClose />
+        </button>
       </header>
       <section className="modal__contact">
         <p>Phone: {phone}</p>
-        <p>Mail: {mail}</p>
+        <p>Mail: {email}</p>
         <p>
           Address: {address.street}, {address.suite}, {address.city}
         </p>
