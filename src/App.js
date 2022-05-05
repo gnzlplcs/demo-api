@@ -1,6 +1,6 @@
-import "./App.css";
 import { useEffect, useState } from "react";
 import Contact from "./components/Contact";
+import './App.css';
 
 function App() {
   const url = `https://jsonplaceholder.typicode.com/users`;
@@ -18,9 +18,9 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>🧔🏻 Contacts</h1>
-      <div className="container">
+    <div className="App bg-secondary text-light p-2">
+      <h1 className="display-1">🧔🏻 Contacts</h1>
+      <div className="container-fluid">
         {!users
           ? "Loading..."
           : users.map((user, index) => (

@@ -13,10 +13,12 @@ const Contact = ({ contact, onCloseModal }) => {
 
   return (
     <>
-      <h2>{name}</h2>
-      <button onClick={handleModal}>
-        More details <FaChevronRight />
-      </button>
+      <div className="card p-3 mb-2 bg-light text-dark bg-gradient d-flex flex-row justify-content-between">
+        <h2 className='display-3'>{name}</h2>
+        <button className="align-self-center btn btn-primary" onClick={handleModal}>
+          More details <FaChevronRight />
+        </button>
+      </div>
       {modal && <Modal contact={contact} onCloseModal={handleModal} />}
     </>
   )
