@@ -1,4 +1,3 @@
-import { FaRegWindowClose } from "react-icons/fa";
 import './Modal.css';
 
 const Modal = ({ contact, onCloseModal }) => {
@@ -8,9 +7,7 @@ const Modal = ({ contact, onCloseModal }) => {
     <div className="card card-modal bg-warning text-dark">
       <header className="card-body d-flex justify-content-between">
         <h1 className="card-title">{name}</h1>
-        <button onClick={onCloseModal} className="btn btn-danger">
-          <FaRegWindowClose />
-        </button>
+        <button onClick={onCloseModal} className="btn btn-close" />
       </header>
       <section className="card-body">
         <h2 className="card-title">Contact</h2>

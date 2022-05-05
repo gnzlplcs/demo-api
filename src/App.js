@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App bg-secondary text-light p-2">
-      <h1 className="display-1">🧔🏻 Contacts</h1>
+      <h1 className="display-1 text-center">🧔🏻 Contacts</h1>
       <div className="container-fluid">
         {!users
           ? "Loading..."
